@@ -10,36 +10,60 @@
 
   <script>
     const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
-
     function makeGreen() {
       const p = document.querySelector('p');
+      pp=p
       p.style.color = '#BADA55';
       p.style.fontSize = '50px';
     }
 
     // Regular
-
+    console.log('Hello wrold');
+  
     // Interpolated
+    console.log('Hello %s','wrold');
 
     // Styled
+    console.log('%c Hello wrold','color:lightgreen;font-size:20px');
 
     // warning!
+    console.warn('Hello wrold');
 
     // Error :|
+    console.error('Hello wrold');
 
     // Info
+    console.info('Hello wrold');
 
     // Testing
+    console.assert(1===2,'wrong');
 
     // clearing
+    console.clear();
 
     // Viewing DOM Elements
+    let pp = document.querySelector('p');
+    console.dir(pp);
 
     // Grouping together
-
+    dogs.forEach((dog)=>{
+      console.group(`${dog.name}`)
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`)
+    })
     // counting
+    console.count('count');
+    console.count('count');
+    console.count('count');
+    console.count('count');
+    console.count('count');
 
     // timing
+    console.time('time');
+    console.timeEnd('time');
+
 
   </script>
 </body>
