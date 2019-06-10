@@ -7,6 +7,16 @@
 </head>
 <body>
 <script>
+  let pressArray=[];
+  let secretCode='wesbos';
+  window.addEventListener('keyup',(ele)=>{
+    pressArray.push(ele.key);
+    pressArray.splice(-secretCode.length-1,pressArray.length-secretCode.length);
+    if(pressArray.join().includes(secretCode)){
+      console.log('Ding Ding!');
+      cornify_add();
+    }
+  })
 </script>
 </body>
 </html>
